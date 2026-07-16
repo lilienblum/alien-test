@@ -8,21 +8,22 @@ const seed = {
   "doc:two": "shared kv is working",
 }
 
-for (const [key, value] of Object.entries(seed)) {
-  await index.set(key, value)
-}
+async function main(): Promise<void> {
+  for (const [key, value] of Object.entries(seed)) {
+    await index.set(key, value)
+  }
 
-const receiver = createCommandReceiver()
+  const receiver = createCommandReceiver()
 
-receiver.handle("status", async () => {
-  const documents = await index.list({ prefix: "doc:" })
-  return {
+  receiver.handle("status", async () => ({
     resource: RESOURCE,
     role: "daemon",
     model: "pull",
-    documents: documents.length,
-  }
-})
+    documents: (await index.scan("doc:")).items.length,
+  }))
 
-console.log(`${RESOURCE} started; seeded shared KV`)
-await receiver.run()
+  console.log(`${RESOURCE} started; seeded shared KV`)
+  await receiver.run()
+}
+
+void main()

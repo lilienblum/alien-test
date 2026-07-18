@@ -1,0 +1,9 @@
+{
+  "name": "@alien-test/debug-daemon",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@alienplatform/bindings": "^1.14.1",
+    "@alienplatform/commands": "^1.14.1"
+  }
+}

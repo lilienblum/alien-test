@@ -6,6 +6,7 @@ Resources:
 
 - `api`: HTTP Worker with `/health`, `/status`, and `/kv`
 - `debug-daemon`: runtime-less Daemon that seeds shared KV and leases `status`
+- `compute`: AWS compute cluster that hosts `debug-daemon`
 - `index`: shared KV binding
 
 Both resources expose `status`, so invoke with an explicit target.

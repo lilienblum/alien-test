@@ -22,7 +22,7 @@ async function main(): Promise<void> {
     documents: (await index.scan("doc:")).items.length,
   }))
 
-  console.log(`${RESOURCE} started; seeded shared KV`)
+  console.log(`${RESOURCE} started; seeded shared KV and command receiver ready`)
   await receiver.run()
 }
 

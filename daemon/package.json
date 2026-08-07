@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@alienplatform/bindings": "^1.14.1",
-    "@alienplatform/commands": "^1.14.1"
+    "@alienplatform/bindings": "^3.3.11",
+    "@alienplatform/commands": "file:../standalone-commands/vendor/alienplatform-commands-3.3.11-6d5c74f.tgz"
   }
 }

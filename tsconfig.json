@@ -2,8 +2,10 @@
   "compilerOptions": {
     "module": "ESNext",
     "moduleResolution": "bundler",
+    "target": "ES2022",
     "strict": true,
-    "noEmit": true
+    "noEmit": true,
+    "skipLibCheck": true
   },
-  "include": ["alien.ts", "worker/**/*.ts", "daemon/**/*.ts"]
+  "include": ["alien.ts", "worker/**/*.ts", "daemon/**/*.ts", "standalone-commands/**/*.ts"]
 }

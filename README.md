@@ -11,6 +11,12 @@ Resources:
 
 Both resources expose `status`, so invoke with an explicit target.
 
+The separate [`standalone-commands`](./standalone-commands) fixture exercises
+hosted external-app onboarding with a real deployment: an external pull receiver
+bootstraps with `createCommandReceiver({ deploymentId, apiKey, target })`, and an
+external sender bootstraps with `CommandsClient.forDeployment(...)` before
+invoking `resize-image`.
+
 ## Local
 
 ```sh

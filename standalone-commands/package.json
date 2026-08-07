@@ -1,0 +1,13 @@
+{
+  "name": "alien-standalone-commands-fixture",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "receiver": "node receiver.mjs",
+    "invoke": "node invoke.mjs"
+  },
+  "dependencies": {
+    "@alienplatform/commands": "file:./vendor/alienplatform-commands-3.3.11-6d5c74f.tgz",
+    "@alienplatform/core": "^3.3.11"
+  }
+}

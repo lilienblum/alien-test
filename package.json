@@ -7,10 +7,10 @@
     "test:ts": "tsc --noEmit"
   },
   "dependencies": {
-    "@alienplatform/bindings": "^1.14.1",
-    "@alienplatform/commands": "^1.14.1",
-    "@alienplatform/core": "^1.14.1",
-    "@alienplatform/sdk": "^1.14.1",
+    "@alienplatform/bindings": "^3.3.11",
+    "@alienplatform/commands": "file:./standalone-commands/vendor/alienplatform-commands-3.3.11-6d5c74f.tgz",
+    "@alienplatform/core": "^3.3.11",
+    "@alienplatform/sdk": "^3.3.11",
     "hono": "^4.0.0"
   },
   "devDependencies": {

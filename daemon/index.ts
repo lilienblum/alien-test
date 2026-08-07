@@ -15,7 +15,7 @@ async function main(): Promise<void> {
 
   const receiver = createCommandReceiver()
 
-  receiver.handle("status", async () => ({
+  receiver.command("status", async () => ({
     resource: RESOURCE,
     role: "daemon",
     model: "pull",

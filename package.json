@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@alienplatform/bindings": "^3.3.11",
-    "@alienplatform/commands": "file:./standalone-commands/vendor/alienplatform-commands-3.3.11-6d5c74f.tgz",
+    "@alienplatform/commands": "file:./standalone-commands/vendor/alienplatform-commands-3.3.11-4965baf.tgz",
     "@alienplatform/core": "^3.3.11",
     "@alienplatform/sdk": "^3.3.11",
     "hono": "^4.0.0"

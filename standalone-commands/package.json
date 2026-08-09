@@ -7,7 +7,7 @@
     "invoke": "node invoke.mjs"
   },
   "dependencies": {
-    "@alienplatform/commands": "file:./vendor/alienplatform-commands-3.3.11-042aca4.tgz",
+    "@alienplatform/commands": "file:./vendor/alienplatform-commands-3.3.11-6eacfca.tgz",
     "@alienplatform/core": "^3.3.11"
   }
 }

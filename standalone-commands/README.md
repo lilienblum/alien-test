@@ -18,7 +18,7 @@ capabilities for manager requests.
 
 Until the hosted onboarding change is published to npm, the fixture vendors the
 56 KiB `pnpm pack` output built from Alien commit
-`042aca4778bc43548d7cfce4982375f7d792b34c` (PR #269). This makes the example
+`6eacfca293d30081448ea1aefbe70791a5832ef2` (PR #269). This makes the example
 reproducible without a developer-local symlink. Replace the tarball dependency
 with the released package version after publication.
 

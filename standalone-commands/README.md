@@ -18,12 +18,12 @@ capabilities for manager requests.
 
 Until the hosted onboarding change is published to npm, the fixture vendors the
 56 KiB `pnpm pack` output built from Alien commit
-`4965baf86ef602c2c0746628ac96a9d9f10c9d2e` (PR #269). This makes the example
+`2bae44526655b76c2e9c33a73c283176f5651fbf` (PR #269). This makes the example
 reproducible without a developer-local symlink. Replace the tarball dependency
 with the released package version after publication.
 
 Tarball SHA-256:
-`7c843596c5ed76411d9635f3f6a41c4dad96667b8870f5df2af70c9c53d69e28`.
+`aab1228a400aaeeaf0c0610434e0ffb4f48d7c0b10c21287cd46a9560c1f1048`.
 
 ## Deploy
 
@@ -45,10 +45,9 @@ The Worker registers `resize-image` with `@alienplatform/sdk`. Do not run
 the provider-native transport into `alien-worker-runtime`.
 
 The AWS variant also exposes `/hello` publicly and uses it as a readiness probe.
-The GCP variant declares a public endpoint because the current Cloud Run v2
-controller emits an invalid ingress enum for a Worker with no public endpoint.
-A successful Commands assertion exercises Pub/Sub push delivery directly; it
-does not depend on the external load balancer or custom domain being reachable.
+The GCP variant intentionally has no public endpoint. A successful Commands
+assertion therefore covers internal-only Cloud Run ingress and Pub/Sub push
+delivery without depending on an external load balancer or custom domain.
 
 ## Exercise the external flow
 

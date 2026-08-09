@@ -21,16 +21,16 @@ function workerStack(platform: FixturePlatform) {
     .permissions("execution")
     .commandsEnabled(true)
 
-  // AWS also covers the user-facing HTTP endpoint readiness path. GCP needs a
-  // public endpoint until private Cloud Run ingress is emitted with a valid v2
-  // API enum, but the Commands assertion itself uses Pub/Sub push delivery.
+  // AWS also covers the user-facing HTTP endpoint readiness path. The GCP
+  // Worker stays private so the fixture exercises internal-only Cloud Run
+  // ingress and Pub/Sub push delivery.
   const externalImageProcessor =
     platform === "aws"
       ? worker
           .publicEndpoint("http")
           .readinessProbe({ method: "GET", path: "/hello" })
           .build()
-      : worker.publicEndpoint("http").build()
+      : worker.build()
 
   return new alien.Stack("standalone-commands-worker-fixture")
     .platforms([platform])
